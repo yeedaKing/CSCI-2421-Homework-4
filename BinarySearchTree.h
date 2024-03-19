@@ -3,8 +3,11 @@
 
 #include "TreeNode.h"
 #include <vector>
+#include <algorithm>
+#include <stack>
+#include <iostream>
 
-using std::vector;
+using namespace std;
 
 class BinarySearchTree {
 public:
@@ -16,10 +19,11 @@ public:
     void preOrderTraversal();
     void inOrderTraversal();
     void postOrderTraversal();
-    int findHeight();
+    int findHeight(TreeNode* node);
 
 private:
     void dfs(TreeNode* curr);
+    void helper(TreeNode* node);
     TreeNode* root;
 };
 
